@@ -2,7 +2,7 @@ import styles from './hero.module.css'
 import {Link} from 'react-scroll'
 import {BsArrowRight} from "react-icons/bs"
 import {useEffect, useState} from "react";
-import image from './assets/hero-banner.png'
+import heroBanner from './assets/hero-banner.png'
 
 const HeroScreen = () => {
     const [mouseX, setMouseX] = useState(0);
@@ -56,7 +56,7 @@ const HeroScreen = () => {
                         <div className={styles.parallax} style={{
                             transform: `translate(-${mouseX * 0.01}px, -${mouseY * 0.01}px)`,
                         }}>
-                            <img className={styles.image} src={image} alt='Баннер главного экрана'/>
+                            <img className={styles.image} src={heroBanner} alt='Баннер главного экрана'/>
                         </div>
                     </div>
                 </div>

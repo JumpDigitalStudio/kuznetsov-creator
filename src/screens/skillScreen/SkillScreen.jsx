@@ -1,6 +1,6 @@
 import styles from './skill.module.css'
-import decoration from './assets/skill-decoration.png'
-import image from './assets/skill-banner.png'
+import skillDecoration from './assets/skill-decoration.png'
+import skillBanner from './assets/skill-banner.png'
 
 const SkillScreen = () => {
   return (
@@ -12,9 +12,9 @@ const SkillScreen = () => {
                       <h2 className='display-2'>Мой арсенал</h2>
                   </div>
                   <div className={styles.wrapper_skills}>
-                      <img className={styles.skills} src={image} alt='Языки программирования'/>
+                      <img className={styles.skills} src={skillBanner} alt='Языки программирования'/>
                   </div>
-                  <img className={styles.decoration} src={decoration} alt='Декор'/>
+                  <img className={styles.decoration} src={skillDecoration} alt='Декор'/>
               </div>
           </div>
       </section>
