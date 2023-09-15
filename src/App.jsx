@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage.jsx";
 import PlaygroundPage from "./pages/PlaygroundPage.jsx";
 const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/kuznetsov-creator'>
             <Routes>
                 <Route path='/' element={<Layout/>}>
                     <Route index element={<HomePage/>}/>
