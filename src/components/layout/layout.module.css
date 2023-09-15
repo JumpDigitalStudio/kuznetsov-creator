@@ -21,7 +21,7 @@ Header и Footer! Служит оберткой для
     justify-content: flex-start;
 
     background-size: cover;
-    background: url("/hero-decoration.svg") no-repeat top;
+    background: url("/page-decoration.svg") no-repeat top;
 }
 .wrapper::before {
     position: absolute;

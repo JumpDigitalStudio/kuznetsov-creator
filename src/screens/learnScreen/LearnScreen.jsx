@@ -2,6 +2,8 @@ import styles from './learn.module.css'
 import {Link} from "react-router-dom";
 import {useInView} from "react-intersection-observer";
 import {useEffect, useRef, useState} from "react";
+import learnVideo from './assets/video.mp4'
+import decoration from './assets/learn-decoration.svg'
 
 const LearnScreen = () => {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -52,10 +54,10 @@ const LearnScreen = () => {
                     <div className={styles.column}>
                         <div className={styles.wrapper_video} ref={ref}>
                             <video controls className={styles.video} ref={videoRef}>
-                                <source src='/video.mp4' type="video/mp4" />
+                                <source src={learnVideo} type="video/mp4" />
                                 Ваш браузер не поддерживает видео в формате MP4.
                             </video>
-                            <img className={styles.image} src='/learn-decoration.svg' alt='Баннер Учись со мной'/>
+                            <img className={styles.image} src={decoration} alt='Баннер Учись со мной'/>
                         </div>
                     </div>
                 </div>

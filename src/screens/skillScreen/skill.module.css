@@ -7,9 +7,6 @@
     height: var(--elem-width);
     width: var(--elem-width);
 
-    background: url("/skill-decoration.png") center no-repeat;
-    background-size: contain;
-
     animation: rotate 20s linear infinite;
 }
 .content {

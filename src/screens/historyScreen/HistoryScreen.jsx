@@ -2,6 +2,10 @@ import styles from './history.module.css'
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {useEffect, useState} from "react";
+import image1 from './assets/1.png'
+import image2 from './assets/2.png'
+import image3 from './assets/3.png'
+import image4 from './assets/4.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -44,10 +48,10 @@ const HistoryScreen = () => {
                 <div className={styles.content}>
                     <div className={styles.wrapper_images}>
                         <div className={styles.images}>
-                            <img src='/1.png' className={styles.image} alt='Начало'/>
-                            <img src='/2.png' className={styles.image} alt='Осознание'/>
-                            <img src='/3.png' className={styles.image} alt='Взросление'/>
-                            <img src='/4.png' className={styles.image} alt='Становление'/>
+                            <img src={image1} className={styles.image} alt='Начало'/>
+                            <img src={image2} className={styles.image} alt='Осознание'/>
+                            <img src={image3} className={styles.image} alt='Взросление'/>
+                            <img src={image4} className={styles.image} alt='Становление'/>
                         </div>
                     </div>
                     <div className={styles.wrapper_cards}>
