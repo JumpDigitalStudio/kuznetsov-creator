@@ -24,7 +24,7 @@ const LearnScreen = () => {
             setIsVideoPlaying(false);
             toggleVideo(false);
         }
-    }, [inView]);
+    }, [inView, isVideoPlaying]);
 
     return (
         <section className={styles.section} id='learn'>
@@ -52,10 +52,10 @@ const LearnScreen = () => {
                     <div className={styles.column}>
                         <div className={styles.wrapper_video} ref={ref}>
                             <video controls className={styles.video} ref={videoRef}>
-                                <source src='/public/video.mp4' type="video/mp4" />
+                                <source src='/video.mp4' type="video/mp4" />
                                 Ваш браузер не поддерживает видео в формате MP4.
                             </video>
-                            <img className={styles.image} src='/public/learn-decoration.svg' alt='Баннер Учись со мной'/>
+                            <img className={styles.image} src='/learn-decoration.svg' alt='Баннер Учись со мной'/>
                         </div>
                     </div>
                 </div>

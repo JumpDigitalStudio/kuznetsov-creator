@@ -44,10 +44,10 @@ const HistoryScreen = () => {
                 <div className={styles.content}>
                     <div className={styles.wrapper_images}>
                         <div className={styles.images}>
-                            <img src='/public/history/1.png' className={styles.image} alt='Начало'/>
-                            <img src='/public/history/2.png' className={styles.image} alt='Осознание'/>
-                            <img src='/public/history/3.png' className={styles.image} alt='Взросление'/>
-                            <img src='/public/history/4.png' className={styles.image} alt='Становление'/>
+                            <img src='/history/1.png' className={styles.image} alt='Начало'/>
+                            <img src='/history/2.png' className={styles.image} alt='Осознание'/>
+                            <img src='/history/3.png' className={styles.image} alt='Взросление'/>
+                            <img src='/history/4.png' className={styles.image} alt='Становление'/>
                         </div>
                     </div>
                     <div className={styles.wrapper_cards}>

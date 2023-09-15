@@ -46,7 +46,7 @@ function MyButton() {
                             На моей Игровой Площадке ты сможешь освоить JavaScript &mdash; язык, который делает веб
                             интерактивным и захватывающим.
                             <br/>
-                            <b>А сейчас нажми кнопку <span className='text-gradient'>"Run"</span>, чтобы увидеть магию!</b>
+                            <b>А сейчас нажми кнопку <span className='text-gradient'>&quot;Run&quot;</span>, чтобы увидеть магию!</b>
                         </p>
                         <div className={styles.buttons}>
                             <Link to='/' className='button button__outline'>
