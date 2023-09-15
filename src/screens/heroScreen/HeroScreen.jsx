@@ -55,7 +55,7 @@ const HeroScreen = () => {
                         <div className={styles.parallax} style={{
                             transform: `translate(-${mouseX * 0.01}px, -${mouseY * 0.01}px)`,
                         }}>
-                            <img className={styles.image} src='/hero-banner.png' alt='Баннер главного экрана'/>
+                            <img className={styles.image} src='/src/assets/images/hero-banner.png' alt='Баннер главного экрана'/>
                         </div>
                     </div>
                 </div>
