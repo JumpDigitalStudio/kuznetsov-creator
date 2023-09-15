@@ -1,0 +1,21 @@
+.section {
+    padding-top: 50px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 4rem 6rem;
+
+    width: 100%;
+    gap: 40px
+}
+
+.card {
+    display: grid;
+    justify-content: center;
+    row-gap: 15px;
+}

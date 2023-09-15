@@ -1,0 +1,39 @@
+.section {
+    min-height: 600px;
+    max-height: max-content;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+
+    column-gap: 50px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    row-gap: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 15px;
+}
+
+.sandbox {
+    width: 100%;
+    height: 100%;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

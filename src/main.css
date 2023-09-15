@@ -1,0 +1,332 @@
+/* Подключение локальных шрифтов */
+/* ========================================= */
+/* Решил подключать локально, чтобы показать
+ ребятам как работать со шрифтами. Освоить
+ Google Fonts они всегда успеют :) */
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope Light'), local('Manrope-Light'),
+    url('./assets/fonts/Manrope-Light.woff2') format('woff2'),
+    url('./assets/fonts/Manrope-Light.woff') format('woff'),
+    url('./assets/fonts/Manrope-Light.eot') format('embedded-opentype'),
+    url('./assets/fonts/Manrope-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope Regular'), local('Manrope-Regular'),
+    url('./assets/fonts/Manrope-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Manrope-Regular.woff') format('woff'),
+    url('./assets/fonts/Manrope-Regular.eot') format('embedded-opentype'),
+    url('./assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope Semibold'), local('Manrope-Semibold'),
+    url('./assets/fonts/Manrope-Semibold.woff2') format('woff2'),
+    url('./assets/fonts/Manrope-Semibold.woff') format('woff'),
+    url('./assets/fonts/Manrope-Semibold.eot') format('embedded-opentype'),
+    url('./assets/fonts/Manrope-Semibold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: local('Manrope Bold'), local('Manrope-Bold'),
+    url('./assets/fonts/Manrope-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Manrope-Bold.woff') format('woff'),
+    url('./assets/fonts/Manrope-Bold.eot') format('embedded-opentype'),
+    url('./assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* Глобальные стили */
+/* ========================================= */
+:root {
+    --primary-color: #FF4B32FF;
+    --secondary-color: #EF9D00FF;
+    --text-color: #ffffff;
+    --bg-color: #202020;
+
+    --gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+
+    --font-family: 'Manrope', sans-serif;
+    --font-weight: 300;
+    --font-size: 16px;
+
+    --transition-base: .2s ease-in-out 0s;
+    --transition-slow: .4s ease-in-out 0s;
+
+    --br-base: 20px;
+    --br-medium: 30px;
+    --br-big: 50px;
+    --br-pill: 500px;
+}
+
+html {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: var(--bg-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border: 4px var(--bg-color) solid;
+        border-radius: var(--br-pill);
+        background-color: var(--secondary-color);
+    }
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+/* Контейнеры */
+/* ========================================= */
+/* Стили для разных контейнеров приложения:
+основного и полноразмерного. */
+.container {
+    max-width: 1300px;
+    width: 100%;
+
+    padding: 0 25px;
+}
+
+@media screen and (width <= 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (width <= 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (width <= 576px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
+
+/* Типографика */
+/* ========================================= */
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.7rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+/* Текст */
+span {
+    font-size: inherit;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Ссылки */
+a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.link {
+    cursor: pointer;
+
+    color: inherit;
+    will-change: color;
+    transition: var(--transition-base);
+}
+
+.link:hover {
+    color: var(--secondary-color);
+}
+
+/* Модификации текста */
+.text-gradient {
+    font-weight: 600;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.display-1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.display-2 {
+    font-size: 3.7rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+/* UI - Элементы */
+/* ========================================= */
+/* Разновидности кнопок, индикаторов и других
+интерактивных элементов. */
+
+/* Кнопки */
+.button {
+    padding: 12px 30px;
+
+    cursor: pointer;
+
+    color: inherit;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    outline: none;
+    border: none;
+    border-radius: var(--br-pill);
+
+    will-change: box-shadow, background;
+    transition: var(--transition-base);
+}
+
+.button__small {
+    padding: 8px 15px;
+    font-size: .8rem;
+}
+
+.button:has(svg) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 15px;
+}
+
+.button > svg {
+    width: 20px;
+    height: 20px;
+}
+
+.button:hover {
+    filter: brightness(85%);
+}
+
+.button__gradient {
+    background: var(--gradient);
+}
+
+.button__primary {
+    background: var(--primary-color);
+}
+
+.button__secondary {
+    background: var(--secondary-color);
+}
+
+.button__outline {
+    border: 1px white solid;
+    background: none;
+}
+
+.button__trans {
+    border: none;
+    background: none;
+}
+
+/* Карточки */
+.card {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--br-big);
+    border: 1px solid rgb(255 255 255 / 8%);
+}
+
+.card__solid {
+    background: #222222;
+}
+
+.card__glass {
+    background: rgb(255 255 255 / 3%);
+    backdrop-filter: blur(20px);
+}
+
+
+.w-100 {
+    width: 100%;
+}

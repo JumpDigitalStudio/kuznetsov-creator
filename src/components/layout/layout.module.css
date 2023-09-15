@@ -1,0 +1,39 @@
+/* Стили "обёртки" веб-приложения */
+/* ========================================= */
+/* Wrapper (Обертка) - Основной контейнер для
+контента. Не включает в себя компоненты:
+Header и Footer! Служит оберткой для
+секций веб-приложения. */
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+
+    padding-top: 100px;
+
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-size: cover;
+    background: url("/public/hero-decoration.svg") no-repeat top;
+}
+.wrapper::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: '';
+    pointer-events: none;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: 100%;
+    background: url("/public/noise-decoration.svg") repeat;
+}
