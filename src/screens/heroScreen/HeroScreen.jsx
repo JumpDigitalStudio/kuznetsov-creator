@@ -32,8 +32,8 @@ const HeroScreen = () => {
     return (
         <section className={styles.section}>
             <div className='container'>
-                <div className={styles.content}>
-                    <div className={styles.column}>
+                <div className={styles.section__content}>
+                    <div className={styles.section__column}>
                         <h1>Знакомьтесь,<br/>
                             <span className='text-gradient'>Kuznetsov Creator</span>
                         </h1>
@@ -42,7 +42,7 @@ const HeroScreen = () => {
                             Мой путь начался 5 лет назад, и за это время я создал множество сайтов, веб-платформ и даже
                             коммерческих SPA-приложений.
                         </p>
-                        <div className={styles.buttons}>
+                        <div className={styles.section__buttons}>
                             <Link to='features' {...scrollOptions} className='button button__gradient'>
                                 Подробнее
                             </Link>
@@ -52,11 +52,11 @@ const HeroScreen = () => {
                             </a>
                         </div>
                     </div>
-                    <div className={styles.column}>
-                        <div className={styles.parallax} style={{
+                    <div className={styles.section__column}>
+                        <div className={styles.section__parallax} style={{
                             transform: `translate(-${mouseX * 0.01}px, -${mouseY * 0.01}px)`,
                         }}>
-                            <img className={styles.image} src={heroBanner} alt='Баннер главного экрана'/>
+                            <img className={styles.section__image} src={heroBanner} alt='Баннер главного экрана'/>
                         </div>
                     </div>
                 </div>

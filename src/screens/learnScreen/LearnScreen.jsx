@@ -31,10 +31,10 @@ const LearnScreen = () => {
     return (
         <section className={styles.section} id='learn'>
             <div className="container">
-                <div className={styles.content}>
-                    <div className={styles.column}>
+                <div className={styles.section__content}>
+                    <div className={styles.section__column}>
                         <span className='text-gradient'>От джуна до сеньора-помидора</span>
-                        <h2 className='display-1'>
+                        <h2 className='display-2'>
                             Учись со мной
                         </h2>
                         <p>
@@ -44,20 +44,20 @@ const LearnScreen = () => {
                             создавать
                             сайты любых форм и размеров, освоите искусство фронтенд-разработки и многое другое.
                         </p>
-                        <div className={styles.buttons}>
+                        <div className={styles.section__buttons}>
                             <Link to='playground' className='button button__gradient'>
                                 Playground
                             </Link>
                             <span>Познай силу JavaScript!</span>
                         </div>
                     </div>
-                    <div className={styles.column}>
-                        <div className={styles.wrapper_video} ref={ref}>
-                            <video controls className={styles.video} ref={videoRef}>
+                    <div className={styles.section__column}>
+                        <div className={styles.section__video} ref={ref}>
+                            <video controls className={styles.section__video_player} ref={videoRef}>
                                 <source src={learnVideo} type="video/mp4" />
                                 Ваш браузер не поддерживает видео в формате MP4.
                             </video>
-                            <img className={styles.image} src={learnDecoration} alt='Баннер Учись со мной'/>
+                            <img className={styles.section__image} src={learnDecoration} alt='Баннер Учись со мной'/>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {animateScroll} from 'react-scroll'
 import {BsArrowUpShort} from "react-icons/bs"
-import styles from  './scrollToTop.module.css'
+import styles from './scroll.module.css'
 
 const ScrollTopButton = () => {
     const [showButton, setShowButton] = useState(false)

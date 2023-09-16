@@ -1,26 +1,28 @@
+/* Стили секции "Playground" */
+/* ========================================= */
 .section {
     min-height: 600px;
     max-height: max-content;
 }
 
-.content {
+.section__content {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     align-items: center;
 
     column-gap: 50px;
 }
-
-.column {
+.section__column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
+    overflow: hidden;
+
     row-gap: 30px;
 }
-
-.buttons {
+.section__buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -29,11 +31,29 @@
     column-gap: 15px;
 }
 
-.sandbox {
+.section__sandbox {
     width: 100%;
     height: 100%;
 
     ::-webkit-scrollbar {
         display: none;
+    }
+}
+
+/* Адаптивный дизайн секции */
+/* ========================================= */
+@media screen and (width <= 1025px) {
+    .section__content {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+    .section__column {
+        text-align: center;
+        align-items: center;
+    }
+}
+@media screen and (width <= 769px) {
+    .section {
+        margin-bottom: 100px;
     }
 }

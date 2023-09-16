@@ -6,9 +6,9 @@ const FeatureScreen = () => {
         <section className={styles.section} id='features'>
             <div className='container'>
                 <div className="card card__glass">
-                    <div className={styles.content}>
+                    <div className={styles.section__content}>
                         {data.map((item, index) => (
-                            <div className={styles.card} key={index}>
+                            <div className={styles.section__card} key={index}>
                                 <p className='text-gradient'>{item.name}</p>
                                 <span className='display-1'>{item.value}</span>
                             </div>

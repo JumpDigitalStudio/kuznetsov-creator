@@ -1,21 +1,49 @@
+/* Стили секции "Features" */
+/* ========================================= */
 .section {
     padding-top: 50px;
 }
-
-.content {
+.section__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: space-between;
 
-    margin: 4rem 6rem;
+    margin: 4rem 5rem;
 
     width: 100%;
     gap: 40px
 }
-
-.card {
+.section__card {
     display: grid;
     justify-content: center;
     row-gap: 15px;
+}
+
+/* Адаптивный дизайн секции */
+/* ========================================= */
+@media screen and (width <= 1025px) {
+    .section__content {
+        margin: 4rem;
+        gap: 15px;
+    }
+}
+@media screen and (width <= 769px) {
+    .section {
+        padding: 50px 0;
+    }
+    .section__content {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 4rem 3rem;
+        gap: 30px 15px;
+    }
+    .section__card {
+        text-align: center;
+        row-gap: 10px;
+    }
+}
+@media screen and (width <= 426px) {
+    .section__content {
+        margin: 3rem 2rem;
+    }
 }

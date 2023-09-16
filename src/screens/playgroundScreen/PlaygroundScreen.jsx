@@ -2,43 +2,18 @@ import {Sandpack} from "@codesandbox/sandpack-react";
 import { atomDark } from "@codesandbox/sandpack-themes";
 import styles from './playground.module.css'
 import {Link} from "react-router-dom";
+import {playgroundCode} from "./playgroundCode.js";
 
 const PlaygroundScreen = () => {
     const files = {
-        "/App.js":
-            `import { useState } from 'react';
-
-export default function MyApp() {
-  return (
-    <div>
-      <h1>Привет, красавчик 👋🏻</h1>
-      <p>Помнишь счетчик лайков на главной странице? Теперь у тебя есть свой!</p>
-      <MyButton />
-    </div>
-  );
-}
-
-function MyButton() {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    <button onClick={handleClick}>
-      Всего {count} 🔥
-    </button>
-  );
-}
-`
+        "/App.js": playgroundCode
     }
 
     return (
         <section className={styles.section}>
             <div className="container">
-                <div className={styles.content}>
-                    <div className={styles.column}>
+                <div className={styles.section__content}>
+                    <div className={styles.section__column}>
                         <h1>Почувствуй<br/>
                             <span className='text-gradient'> мощь JavaScript</span>
                         </h1>
@@ -48,14 +23,14 @@ function MyButton() {
                             <br/>
                             <b>А сейчас нажми кнопку <span className='text-gradient'>&quot;Run&quot;</span>, чтобы увидеть магию!</b>
                         </p>
-                        <div className={styles.buttons}>
+                        <div className={styles.section__buttons}>
                             <Link to='/' className='button button__outline'>
                                 На главную
                             </Link>
                         </div>
                     </div>
-                    <div className={styles.column}>
-                        <div className={styles.sandbox}>
+                    <div className={styles.section__column}>
+                        <div className={styles.section__sandbox}>
                             <Sandpack
                                 files={files}
                                 theme={atomDark}
