@@ -1,8 +1,8 @@
 import styles from './hero.module.css'
-import {Link} from 'react-scroll'
 import {BsArrowRight} from "react-icons/bs"
 import {useEffect, useState} from "react";
 import heroBanner from './assets/hero-banner.png'
+import {Link} from "react-router-dom";
 
 const HeroScreen = () => {
     const [mouseX, setMouseX] = useState(0);
@@ -24,13 +24,8 @@ const HeroScreen = () => {
         };
     }, []);
 
-    const scrollOptions = {
-        smooth: false,
-        offset: -80,
-    };
-
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id='hero'>
             <div className='container'>
                 <div className={styles.section__content}>
                     <div className={styles.section__column}>
@@ -43,7 +38,7 @@ const HeroScreen = () => {
                             коммерческих SPA-приложений.
                         </p>
                         <div className={styles.section__buttons}>
-                            <Link to='features' {...scrollOptions} className='button button__gradient'>
+                            <Link to='/#features' className='button button__gradient'>
                                 Подробнее
                             </Link>
                             <a href='https://github.com/JumpDigitalStudio/kuznetsov-creator.git' target='_blank'

@@ -1,10 +1,18 @@
 import {useEffect, useState} from 'react'
-import {animateScroll} from 'react-scroll'
 import {BsArrowUpShort} from "react-icons/bs"
-import styles from './scroll.module.css'
+import styles from './scrollTopButton.module.css'
 
 const ScrollTopButton = () => {
     const [showButton, setShowButton] = useState(false)
+
+    function handleClick () {
+        setTimeout(() => {
+            window.scrollTo({
+                behavior: 'smooth',
+                top: 0,
+            });
+        }, 100)
+    }
 
     useEffect(() => {
         const scrollOffset = 100
@@ -22,12 +30,8 @@ const ScrollTopButton = () => {
         }
     }, [])
 
-    const scrollTop = () => {
-        animateScroll.scrollTo('top')
-    };
-
     return (
-        <button className={`${styles.button} ${showButton ? styles.show : ''}`} onClick={scrollTop}>
+        <button className={`${styles.button} ${showButton ? styles.show : ''}`} onClick={handleClick}>
             <BsArrowUpShort/>
         </button>
     )

@@ -2,12 +2,14 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "./components/layout/Layout.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import PlaygroundPage from "./pages/PlaygroundPage.jsx";
-import ScrollToTop from "./utils/ScrollToTop.js";
+import ScrollToAnchor from "./utils/ScrollToAnchor.js";
+import ScrollRestoration from './utils/ScrollRestoration.js'
 
 const App = () => {
     return (
         <BrowserRouter basename='/kuznetsov-creator'>
-            <ScrollToTop/>
+            <ScrollToAnchor/>
+            <ScrollRestoration/>
             <Routes>
                 <Route path='/' element={<Layout/>}>
                     <Route index element={<HomePage/>}/>

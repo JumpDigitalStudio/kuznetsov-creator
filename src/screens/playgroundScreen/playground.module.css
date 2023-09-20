@@ -27,8 +27,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    column-gap: 15px;
 }
 
 .section__sandbox {

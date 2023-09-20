@@ -2,7 +2,7 @@
 /* ========================================= */
 .section {
     overflow: hidden;
-    --elem-width: 650px
+    --elem-width: 650px;
 }
 
 .section__content {
